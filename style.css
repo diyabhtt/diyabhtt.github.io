@@ -1,20 +1,42 @@
-body {
-    font-family: 'Poppins', sans-serif;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #0A192F;
-    color: #CCD6F6;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #0A192F;
+    color: #CCD6F6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
-    text-align: center;
-    padding: 30px;
     background-color: #112240;
+    color: #64FFDA;
+    padding: 40px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #64FFDA;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -28,34 +50,93 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #64FFDA;
+    text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease-in-out;
 }
 
-section {
-    padding: 50px;
-    max-width: 800px;
-    margin: auto;
+nav ul li a:hover {
+    color: #FF4070;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0;
+    background-color: #112240;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-out;
 }
 
 h2 {
     color: #64FFDA;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Project Cards */
 .project {
-    background-color: #112240;
+    background-color: #1B2A41;
     padding: 20px;
-    margin: 15px 0;
+    margin-bottom: 20px;
     border-left: 5px solid #64FFDA;
 }
 
-a {
+.project h3 {
+    color: #64FFDA;
+    margin-bottom: 10px;
+}
+
+.project a {
     color: #64FFDA;
     text-decoration: none;
     font-weight: bold;
 }
 
+.project a:hover {
+    color: #FF4070;
+}
+
+/* Contact Info */
+footer {
+    background-color: #112240;
+    color: #CCD6F6;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out 2s;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #64FFDA;
+    text-decoration: none;
+}
+
 a:hover {
-    text-decoration: underline;
+    color: #FF4070;
 }
